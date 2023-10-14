@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>Placement Prediction</title>
+  </head>
+  <body>
+    <div class="intro">
+      <h1>Welcome to Placement Prediction App</h1>
+    </div>
+    <form action="{{ url_for('predict')}}" name="form" method="GET">
+        
+      <p>Enter Coding Skills</p>
+      <input type="number" step="0.01" name="Coding_Skills" id="Coding_Skills" min="0" pattern="^[0-9]\d*$" required/>
+      <br />
+      
+      <p>Enter Aptitude Skills</p>
+      <input type="number" step="0.01" name="Aptitude_Skills" id="Aptitude_Skills" min="0" pattern="^[0-9]\d*$" required/>
+      <br />
+
+      <p>Enter Technical Skills</p>
+      <input type="number" name="Technical_Skills" id="Technical_Skills" min="0" pattern="^[0-9]\d*$" required/>
+      <br />
+      
+      <p>Enter Communication Skills</p>
+      <input type="number" name="Communication_Skills" id="Communication_Skills" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter Core Knowledge</p>
+      <input type="number" name="Core_Knowledge" id="Core_Knowledge" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter Presentation Skills</p>
+      <input type="number" name="Presentation_Skills" id="Presentation_Skills" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter Academic Performance</p>
+      <input type="number" name="Academic_Performance" id="Academic_Performance" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter Puzzle Solving skills</p>
+      <input type="number" name="Puzzle_Solving_skills" id="Puzzle_Solving_skills" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter English Proficiency</p>
+      <input type="number" name="English_Proficiency" id="English_Proficiency" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter Programming Skills</p>
+      <input type="number" name="Programming_Skills" id="Programming_Skills" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter Management Skills</p>
+      <input type="number" name="Management_Skills" id="Management_Skills" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter Projects</p>
+      <input type="number" name="Projects" id="Projects" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter Internships</p>
+      <input type="number" name="Internships" id="Internships" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter Training</p>
+      <input type="number" name="Training" id="Training" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      <p>Enter Backlogs</p>
+      <input type="number" name="Backlog" id="Backlog" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+
+      
+      <button type="submit" value="submit" onclick="submitForm()">Submit</button>
+      
+      <script>
+        function submitForm(){
+            document.form.submit();
+            //document.form.reset();
+        }
+    </script>
+    </form>
+    <div class="end">
+      <h2>This Website uses Random Forest Model to predict results</h2>
+    </div>
+  </body>
+</html>

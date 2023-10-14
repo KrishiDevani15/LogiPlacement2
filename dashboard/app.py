@@ -53,7 +53,7 @@ class MultiApp:
             resume.app()
         if app == 'Aptitude Time':
             Aptitude_Time.app()  
-        if app == 'about':
+        if app == 'About':
             about.app()    
              
           
